@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Router,
-  Switch,
+  Switch
 } from 'react-router-dom';
 
 import { Provider } from 'react-redux';
@@ -13,6 +13,7 @@ import { connectFor } from '@folio/stripes-connect';
 import { Callout } from '@folio/stripes-components';
 
 import ModuleRoutes from './moduleRoutes';
+import getPublicRoutes from './getPublicRoutes';
 import events from './events';
 
 import {
@@ -124,6 +125,7 @@ class RootWithIntl extends React.Component {
                         <Callout ref={this.setCalloutRef} />
                       </> :
                       <Switch>
+                      
                         <TitledRoute
                           name="CreateResetPassword"
                           path="/reset-password/:token"
@@ -151,6 +153,9 @@ class RootWithIntl extends React.Component {
                           path="/check-email"
                           component={<CheckEmailStatusPage />}
                         />
+                        
+                        { getPublicRoutes(stripes) }
+
                         <TitledRoute
                           name="login"
                           component={
