@@ -6,7 +6,7 @@ import { getEventHandler } from './handlerService'
 
 const getPublicRoutes = (stripes, data) => {
   
-  const handlerMods = modules.handler;
+  const handlerMods = modules.handler ?? [];
   
   // Grab the hadnler data like normal.
   return handlerMods.reduce((acc, mod) => {

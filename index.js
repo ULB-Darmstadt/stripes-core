@@ -22,6 +22,7 @@ export { default as IfPermission } from './src/components/IfPermission';
 export { default as TitleManager } from './src/components/TitleManager';
 export { default as HandlerManager } from './src/components/HandlerManager';
 export { default as IntlConsumer } from './src/components/IntlConsumer';
+export { default as OrganizationLogo } from './src/components/OrganizationLogo';
 export { default as AppIcon } from './src/components/AppIcon';
 export { Route, Switch, Redirect } from './src/components/NestedRouter';
 export {
